@@ -17,19 +17,26 @@
 
 		<div id="auth-links">
 			<ul>
+				<% if !user_signed_in? %>
+					<% if !current_page?(new_user_session_path) %>
+					<li>
+						<p>
+							<%= link_to "Sign In", new_user_session_path %>
+						</p>
+					</li>
+					<% end %>
+					<% if !current_page?(new_user_registration_path) %>
+					<li>
+						<p>
+							<%= link_to "Sign Up", new_user_registration_path %>
+						</p>
+					</li>
+					<% end %>
+				<% else %>
 				<li>
-					<p>
-						<%= link_to "Sign In", new_user_session_path %>
-					</p>
+					<p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
 				</li>
-				<li>
-					<p>
-						<%= link_to "Sign Up", new_user_registration_path %>
-					</p>
-				</li>
-				<li>
-					<p><%= link_to "Sign Out", destroy_user_session_path %></p>
-				</li>
+				<% end %>
 				
 			</ul>
 		</div>
