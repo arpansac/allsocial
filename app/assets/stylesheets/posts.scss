@@ -1,3 +1,32 @@
 // Place all the styles related to the Posts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+#new-post-form-container{
+	
+    width: 75%;
+    min-width: 360px;
+    text-align: center;
+    margin: 0 auto;
+
+    label{
+    	display: block;
+    }
+
+    textarea, input[type="submit"]{
+    	display: block;
+    	margin: 0 auto;
+    }
+
+    textarea{
+    	width: 85%;
+    	min-width: 360px;
+    }
+
+    input[type="submit"]{
+	    margin: 10px auto;
+	    border: none;
+	    color: white;
+	    background-color: #5b5bfa;
+    }
+}

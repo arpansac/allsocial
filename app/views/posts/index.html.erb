@@ -1,0 +1,14 @@
+<main>
+
+	<% if user_signed_in? %>
+	<div id="new-post-form-container">
+		<%= form_for @post do |f| %>
+			<%= f.label :content, "Add Post" %>
+			<%= f.text_area :content, placeholder: "Type Here" %>
+			<%= f.submit %>
+		<% end %>
+	</div>
+	<% end %>
+
+
+</main>
