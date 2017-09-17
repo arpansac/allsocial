@@ -44,16 +44,60 @@
 		justify-content: flex-start;
 
 		.post{
+			border-bottom: 1px solid grey;
 			.post-content{
 				display: flex;
 				justify-content: space-between;
-				border-bottom: 1px solid grey;
 				font-size: 0.9rem;
+
+				.text{
+					width: 95%;
+				}
 
 				.post-destroy-link a{
 					text-decoration: none;
 					color: red;
 				}
+			}
+
+			.post-comments-container{
+				width: 50%;
+			    margin: 10px auto;
+			    min-width: 300px;
+
+			    form{
+			    	display: flex;
+
+			    	input, textarea{
+			    		width: 50%;
+		    		}
+			    }
+
+			    .comments-list{
+			    	list-style: none;
+			    	padding-top: 10px;
+			    	padding-left: 0;
+		    	    background-color: rgba(255, 160, 122, 0.35);
+    				padding: 5px;
+			    	li{
+			    		border: 1px dashed grey;
+			    		margin: 3px;
+    					padding: 3px;
+    					display: flex;
+    					justify-content: space-between;
+			    		p{
+			    			margin: 0;
+			    		}
+
+			    		a{
+
+			    			text-decoration: none;
+			    			color: red;
+			    			font-size: 10px;
+			    		}
+			    	}
+
+			    }
 			}
 		}
 

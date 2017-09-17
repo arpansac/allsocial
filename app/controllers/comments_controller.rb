@@ -9,7 +9,7 @@ class CommentsController < ApplicationController
   	@comment = Comment.new(comment_params)
   	@comment.user = current_user
   	@comment.save
-  	return redirect_to action: "index"
+  	return redirect_to posts_path
 
   end
 
