@@ -22,7 +22,22 @@
 							<%= link_to "X", post_path(p.id), method: :delete %>
 						</p>
 					</div>
-					
+					<div class="post-comments-container">
+						<%= form_for p.comments.new do |f| %>
+							<%= f.hidden_field :post_id, value: p.id %>
+							<%= f.text_area :content, placeholder: "Add Comment" %>
+							<%= f.submit %>
+						<% end %>
+						<ul class="comments-list">
+							<% @post.comments.each do |com| %>
+							<li>
+								<p>
+									<%= com.content %>
+								</p>
+							</li>
+							<% end %>
+						</ul>
+					</div>
 				</li>
 			<% end %>
 		</ul>
