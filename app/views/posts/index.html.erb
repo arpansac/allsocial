@@ -10,5 +10,23 @@
 	</div>
 	<% end %>
 
+	<div id="posts-list-container">
+		<ul id="posts-list">
+			<% @posts.each do |p| %>
+				<li class="post">
+					<div class="post-content">
+						<p>
+						<%= p.content %>
+						</p>
+						<p class="post-destroy-link">
+							<%= link_to "X", post_path(p.id), method: :delete %>
+						</p>
+					</div>
+					
+				</li>
+			<% end %>
+		</ul>
+	</div>
+
 
 </main>

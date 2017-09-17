@@ -1,10 +1,11 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user, only: [:create, :destroy]
+  before_action :authenticate_user!, only: [:create, :destroy]
   before_action :set_post, only: [:destroy]
   before_action :authorize_user, only: [:destroy]
 
   def index
   	@post = Post.new
+  	@comment = Comment.new
   	@posts = Post.all
   end
 
@@ -12,13 +13,12 @@ class PostsController < ApplicationController
 
   	@post = Post.new(post_params)
   	@post.user = current_user
-
+  	@post.save
   	return redirect_to action: "index"
 
   end
 
   def destroy
-
   	@post.destroy
   	return redirect_to action: "index"
   end
@@ -26,7 +26,7 @@ class PostsController < ApplicationController
   private
 
   def post_params
-  	params.permit(:post).permit(:content)
+  	params.require(:post).permit(:content)
   end
 
   def set_post

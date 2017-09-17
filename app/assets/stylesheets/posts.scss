@@ -30,3 +30,41 @@
 	    background-color: #5b5bfa;
     }
 }
+
+#posts-list-container{
+
+	width: 75%;
+	min-width: 360px;
+	margin: 0 auto;
+	
+	#posts-list{
+		list-style: none;
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+
+		.post{
+			.post-content{
+				display: flex;
+				justify-content: space-between;
+				border-bottom: 1px solid grey;
+				font-size: 0.9rem;
+
+				.post-destroy-link a{
+					text-decoration: none;
+					color: red;
+				}
+			}
+		}
+
+	}
+}
+
+
+
+
+
+
+
+
+
