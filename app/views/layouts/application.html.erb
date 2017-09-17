@@ -8,6 +8,33 @@
 </head>
 <body>
 
+	<header id="body-header">
+		<div id="page-logo">
+			<%= link_to "/" do%>
+				<%= image_tag("reddit-logo.png") %>
+			<% end %>
+		</div>
+
+		<div id="auth-links">
+			<ul>
+				<li>
+					<p>
+						<%= link_to "Sign In", new_user_session_path %>
+					</p>
+				</li>
+				<li>
+					<p>
+						<%= link_to "Sign Up", new_user_registration_path %>
+					</p>
+				</li>
+				<li>
+					<p><%= link_to "Sign Out", destroy_user_session_path %></p>
+				</li>
+				
+			</ul>
+		</div>
+	</header>
+
 <%= yield %>
 
 </body>
