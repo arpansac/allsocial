@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170917070341) do
+ActiveRecord::Schema.define(version: 20171001080215) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -23,6 +23,28 @@ ActiveRecord::Schema.define(version: 20170917070341) do
 
   add_index "comments", ["post_id"], name: "index_comments_on_post_id"
   add_index "comments", ["user_id"], name: "index_comments_on_user_id"
+
+  create_table "friendships", force: :cascade do |t|
+    t.integer  "user_id",                    null: false
+    t.integer  "friend_id",                  null: false
+    t.boolean  "confirmed",  default: false
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+  end
+
+  add_index "friendships", ["friend_id"], name: "index_friendships_on_friend_id"
+  add_index "friendships", ["user_id"], name: "index_friendships_on_user_id"
+
+  create_table "likes", force: :cascade do |t|
+    t.integer  "likeable_id",   null: false
+    t.string   "likeable_type", null: false
+    t.integer  "user_id",       null: false
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  add_index "likes", ["likeable_type", "likeable_id"], name: "index_likes_on_likeable_type_and_likeable_id"
+  add_index "likes", ["user_id"], name: "index_likes_on_user_id"
 
   create_table "posts", force: :cascade do |t|
     t.text     "content",    null: false

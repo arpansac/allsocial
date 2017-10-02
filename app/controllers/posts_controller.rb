@@ -6,21 +6,20 @@ class PostsController < ApplicationController
   def index
   	@post = Post.new
   	@comment = Comment.new
-  	@posts = Post.all
+  	@posts = Post.all.reverse()
   end
 
   def create
-
   	@post = Post.new(post_params)
   	@post.user = current_user
   	@post.save
-  	return redirect_to action: "index"
-
+  	@comment = Comment.new
   end
 
   def destroy
+    @post_id = @post.id
   	@post.destroy
-  	return redirect_to action: "index"
+  	
   end
 
   private
