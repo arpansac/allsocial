@@ -1,0 +1,2 @@
+$('#comments-list-<%= @post.id %>').append('<%= escape_javascript render "comment", com: @comment%>');
+$('#comments-container-<%= @post.id %> textarea').val('');

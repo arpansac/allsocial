@@ -1,1 +1,16 @@
 $('#posts-list').prepend("<%= escape_javascript  render 'post', p: @post %>");
+
+
+// if liked
+// $('#post-like-<%= @post.id %> user-action').html('Unlike');
+// else
+// $('#post-like-<%= @post.id %> user-action').html('Like')
+// end
+
+
+// $('#post-like-<%= @post.id %> likes-count').html(<%= @post.likes.length %>)
+
+// <div id="post-like-10" class="post-like">
+// 	<span class="user-action"><link_to post-id></span>
+// 	<span class="likes-count"></span>
+// </div>

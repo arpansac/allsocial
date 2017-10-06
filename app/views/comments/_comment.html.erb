@@ -1,0 +1,15 @@
+<li id="comment-<%= com.id %>">
+	<div>
+		<p>
+		<%= com.content %>
+		</p>
+		<p class="author-details"><%= com.user.email%> at <%= com.created_at %>
+		</p>
+	</div>
+	
+	<p class="comment-destroy-link">
+		<% if user_signed_in? && com.user == current_user %>
+		<%= link_to "X", comment_path(com.id), remote: true, method: :delete %>
+		<% end %>
+	</p>
+</li>

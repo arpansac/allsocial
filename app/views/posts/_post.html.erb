@@ -10,30 +10,22 @@
 		</div>
 		
 		<p class="post-destroy-link">
+			<% if user_signed_in? && p.user == current_user %>
 			<%= link_to "X", post_path(p.id), remote: true, method: :delete %>
+			<% end %>
 		</p>
 	</div>
 	<div class="post-comments-container">
-		<%= form_for @comment do |f| %>
-			<%= f.hidden_field :post_id, value: p.id %>
-			<%= f.text_area :content, placeholder: "Add Comment" %>
-			<%= f.submit %>
+		<% if user_signed_in? %>
+			<%= form_for @comment, remote: true do |f| %>
+				<%= f.hidden_field :post_id, value: p.id %>
+				<%= f.text_area :content, placeholder: "Add Comment" %>
+				<%= f.submit %>
+			<% end %>
 		<% end %>
-		<ul class="comments-list">
+		<ul id="comments-list-<%= p.id %>" class="comments-list">
 			<% p.comments.each do |com| %>
-			<li>
-				<div>
-					<p>
-					<%= com.content %>
-					</p>
-					<p class="author-details"><%= com.user.email%> at <%= com.created_at %>
-					</p>
-				</div>
-				
-				<p class="comment-destroy-link">
-					<%= link_to "X", comment_path(com.id), method: :delete %>
-				</p>
-			</li>
+				<%= render 'comments/comment', com: com %>
 			<% end %>
 		</ul>
 	</div>
