@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   
+	get 'users/:id' => 'users#show'
+
 	post 'likes/toggle_comment_like/' => 'likes#toggle_comment_like'
 	post 'likes/toggle_post_like/' => 'likes#toggle_post_like'
 
