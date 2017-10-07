@@ -1,25 +1,45 @@
 class LikesController < ApplicationController
-
+	before_action :authenticate_user!
 
 
 	def toggle_post_like
-		@can_like = false
 		@post = Post.find(params[:post_id])
-		like = Like.find_by(user: current_user, likeable: post)
+		@new_like_status = 'Unlike'
 
-		if like.blank?
-			like Like.new(..)
+		if @post.user_can_like(current_user)
+			Like.create(
+				user: current_user,
+				likeable: @post
+				)
 		else
-			like.destroy
-			@can_like = true
-		end
-		
+			Like.find_by(
+				user: current_user,
+				likeable: @post
+				).destroy
+			@new_like_status = 'Like'
+
+		end 
+
 	end
 
-	def toggle_comment_like
-		liked = false
 
-		like = Like.find_by(user: current_user, )
+	def toggle_comment_like
+		@comment = Post.find(params[:comment_id])
+		@new_like_status = 'Unlike'
+
+		if @comment.user_can_like(current_user)
+			Like.create(
+				user: current_user,
+				likeable: @comment
+				)
+		else
+			Like.find_by(
+				user: current_user,
+				likeable: @comment
+				).destroy
+			@new_like_status = 'Like'
+
+		end 
 	end
 
 end

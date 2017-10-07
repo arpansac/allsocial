@@ -1,0 +1,2 @@
+$('#comment-<%= @comment.id %> .comment-likes .user-like-status a').html("<%= @new_like_status %>");
+$('#comment-<%= @comment.id %> .comment-likes .user-like-count').html("<%= @comment.likes.length %> Likes");

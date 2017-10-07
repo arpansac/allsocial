@@ -4,6 +4,16 @@
 			<p >
 				<%= p.content %>
 			</p>
+			<p class="post-likes">
+				<span class="user-like-status">
+					<% if user_signed_in? %>
+						<%= link_to "#{p.current_like_status(current_user)}", likes_toggle_post_like_path(post_id: p.id), remote: true, method: :post %>
+					<% end %>
+				</span>
+				<span class="user-like-count">
+					<%= p.likes.length %> Likes
+				</span>
+			</p>
 			<p class="author-details">
 				<%= p.user.email%> at <%= p.created_at %>
 			</p>

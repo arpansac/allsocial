@@ -3,6 +3,16 @@
 		<p>
 		<%= com.content %>
 		</p>
+		<p class="comment-likes">
+				<span class="user-like-status">
+					<% if user_signed_in? %>
+						<%= link_to "#{com.current_like_status(current_user)}", likes_toggle_comment_like_path(comment_id: com.id), remote: true, method: :post %>
+					<% end %>
+				</span>
+				<span class="user-like-count">
+					<%= com.likes.length %> Likes
+				</span>
+			</p>
 		<p class="author-details"><%= com.user.email%> at <%= com.created_at %>
 		</p>
 	</div>
