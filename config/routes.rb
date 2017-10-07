@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  
+  	get 'users/filter_by_email' => 'users#filter_by_email'
 	get 'users/:id' => 'users#show'
 
 	post 'likes/toggle_comment_like/' => 'likes#toggle_comment_like'

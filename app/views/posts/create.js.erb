@@ -1,6 +1,9 @@
 $('#posts-list').prepend("<%= escape_javascript  render 'post', p: @post %>");
-
-
+noty({
+	text: 'New Post Created',
+	type: 'success',
+	timeout: 2000
+});
 // if liked
 // $('#post-like-<%= @post.id %> user-action').html('Unlike');
 // else
