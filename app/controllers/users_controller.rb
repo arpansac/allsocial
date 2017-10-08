@@ -20,4 +20,25 @@ class UsersController < ApplicationController
 		return render json: users_list
 	end
 
+	def update
+		user = User.find(params[:id])
+		user.update(
+			email: params[:user][:email],
+			profile_picture: params[:user][:profile_picture]
+			)
+		byebug
+		return redirect_to user_show_path(user.id)
+	end
+
 end
+
+
+
+
+
+
+
+
+
+
+

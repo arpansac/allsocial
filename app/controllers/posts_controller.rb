@@ -4,9 +4,15 @@ class PostsController < ApplicationController
   before_action :authorize_user, only: [:destroy]
 
   def index
+    query = params[:q]
   	@post = Post.new
   	@comment = Comment.new
-  	@posts = Post.all.reverse()
+    if (query.blank?)
+      @posts = Post.all
+    else
+  	 @posts = Post.where('content like ?', ('%' + query + '%')).reverse()
+    end
+    return @posts
   end
 
   def create

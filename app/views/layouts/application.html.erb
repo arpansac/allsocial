@@ -9,6 +9,7 @@
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-noty/2.4.1/packaged/jquery.noty.packaged.min.js"></script>
   <script type="text/javascript" src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js"></script>
   <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+  <meta name="viewport" content="initial-scale=1.0, width=device-width">
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -38,6 +39,9 @@
 					</li>
 					<% end %>
 				<% else %>
+				<li>
+					<p><%= current_user.email %></p>
+				</li>
 				<li>
 					<p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
 				</li>

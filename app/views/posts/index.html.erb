@@ -1,27 +1,33 @@
 <main>
 
-	<div id="user-search-container">
-		<input id="user-search">
-	</div>
 
-	<% if user_signed_in? %>
-	<div id="new-post-form-container">
-		<%= form_for @post, remote: true do |f| %>
-			<%= f.label :content, "Add Post" %>
-			<%= f.text_area :content, placeholder: "Type Here" %>
-			<%= f.submit %>
-		<% end %>
-	</div>
-	<% end %>
-
-	<div id="posts-list-container">
-		<ul id="posts-list">
-			<% @posts.each do |post| %>
-				<%= render 'post', p: post %>
+	<div id="page-container">
+		<div id="posts-container">
+			<% if user_signed_in? %>
+			<div id="new-post-form-container">
+				<%= form_for @post, remote: true do |f| %>
+					<%= f.label :content, "Add Post" %>
+					<%= f.text_area :content, placeholder: "Type Here" %>
+					<%= f.submit %>
+				<% end %>
+			</div>
 			<% end %>
-		</ul>
-	</div>
 
+			<div id="posts-list-container">
+				<ul id="posts-list">
+					<% @posts.each do |post| %>
+						<%= render 'post', p: post %>
+					<% end %>
+				</ul>
+			</div>
+		</div>
+		<div id="friends-container">
+			<h5>Friends</h5>
+			<div id="user-search-container">
+				<input id="user-search">
+			</div>
+		</div>
+	</div>
 
 </main>
 

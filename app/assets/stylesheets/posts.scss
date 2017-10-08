@@ -5,7 +5,6 @@
 #new-post-form-container{
 	
     width: 75%;
-    min-width: 360px;
     text-align: center;
     margin: 0 auto;
 
@@ -20,7 +19,6 @@
 
     textarea{
     	width: 85%;
-    	min-width: 360px;
     }
 
     input[type="submit"]{
@@ -34,7 +32,6 @@
 #posts-list-container{
 
 	width: 75%;
-	min-width: 360px;
 	margin: 0 auto;
 	
 	#posts-list{
@@ -63,7 +60,6 @@
 			.post-comments-container{
 				width: 50%;
 			    margin: 10px auto;
-			    min-width: 300px;
 
 			    form{
 			    	display: flex;
@@ -106,6 +102,33 @@
 
 .author-details{
 	font-size: 10px;
+}
+
+
+#page-container{
+	display: flex;
+	flex-direction: row;
+
+	#posts-container{
+		width: 70%;
+	}
+
+	#friends-container{
+		width: 25%;
+	    border-left: 1px solid black;
+    	padding-left: 15px;
+	}
+}
+
+
+@media screen and (max-width: 480px){
+	#friends-container{
+		display: none;
+	}
+
+	#posts-container{
+		width: 100% !important;
+	}
 }
 
 

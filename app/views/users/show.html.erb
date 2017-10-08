@@ -1,1 +1,50 @@
+
+<% if current_user == @user %>
+	<img id="my-profile-pic" src="<%= @user.profile_picture.url %>">
+<!-- display profile edit form -->
+	<%= form_for @user, html: { multipart: true } do |f|  %>
+
+	<div class="field">
+    <%= f.label :profile_picture %><br />
+    <%= f.file_field :profile_picture%>
+  	</div>
+
+
+	<div class="field">
+    <%= f.label :email %><br />
+    <%= f.email_field :email, autofocus: true %>
+  	</div>
+
+  	<%= f.submit %>
+
+	<% end %>
+
+
+<% else %>
 <h4><%= @user.email %> Profile Page </h4>
+<% end %>
+
+
+<script type="text/javascript">
+
+	
+function readURL(input) {
+    if (input.files && input.files[0]) {
+        var reader = new FileReader();
+
+        reader.onload = function (e) {
+        	console.log('onload', e);
+            $('#my-profile-pic').attr('src', e.target.result);
+        }
+
+        reader.readAsDataURL(input.files[0]);
+    }
+}
+
+
+$("#user_profile_picture").change(function(){
+	console.log('change', event);
+    readURL(this);
+});
+
+</script>
