@@ -32,6 +32,14 @@ class User < ActiveRecord::Base
 
   end
 
+  def get_all_non_friends
+
+    all_friend_ids = self.get_all_friends.pluck(:id)
+
+    return User.where('id not in (?)', all_friend_ids + [self.id])
+
+  end
+
 end
 
 
