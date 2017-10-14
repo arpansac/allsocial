@@ -23,11 +23,8 @@ class User < ActiveRecord::Base
 
   def get_all_friends
   	friend_ids = self.friends.all.pluck(:id)
-
   	inverse_friend_ids = self.inverse_friends.all.pluck(:id)
-
   	all_friends = friend_ids + inverse_friend_ids
-
   	return User.where('id in (?)', all_friends)
 
   end
