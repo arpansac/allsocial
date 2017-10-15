@@ -2,7 +2,7 @@ class User < ActiveRecord::Base
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable, :confirmable
 
   has_attached_file :profile_picture, default_url: "/system/images/:style/missing.png"
   validates_attachment_content_type :profile_picture, content_type: /\Aimage\/.*\z/
@@ -23,11 +23,8 @@ class User < ActiveRecord::Base
 
   def get_all_friends
   	friend_ids = self.friends.all.pluck(:id)
-
   	inverse_friend_ids = self.inverse_friends.all.pluck(:id)
-
   	all_friends = friend_ids + inverse_friend_ids
-
   	return User.where('id in (?)', all_friends)
 
   end

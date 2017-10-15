@@ -15,9 +15,9 @@
 <body>
 
 	<header id="body-header">
-		<div id="page-logo">
+		<div id="page-logo" class="animated bounceInUp">
 			<%= link_to "/" do%>
-				<%= image_tag("reddit-logo.png") %>
+				<%= image_tag("reddit-logo.png")%>
 			<% end %>
 		</div>
 
@@ -40,7 +40,7 @@
 					<% end %>
 				<% else %>
 				<li>
-					<p><%= current_user.email %></p>
+					<p id="current-user"><i class="fa fa-user"></i><%= current_user.email %></p>
 				</li>
 				<li>
 					<p><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></p>
@@ -52,6 +52,10 @@
 	</header>
 
 <%= yield %>
-
+	
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js"></script>
+	<script>
+      new WOW().init();
+  	</script>
 </body>
 </html>

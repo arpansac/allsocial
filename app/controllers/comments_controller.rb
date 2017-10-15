@@ -11,6 +11,8 @@ class CommentsController < ApplicationController
   	@comment.save
     @post = @comment.post
 
+    UserMailer.new_comment_email(@comment).deliver_now
+
   end
 
   def destroy

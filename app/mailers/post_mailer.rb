@@ -1,0 +1,2 @@
+class PostMailer < ApplicationMailer
+end

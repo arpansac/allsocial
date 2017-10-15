@@ -3,6 +3,16 @@
 
 	<div id="page-container">
 		<div id="posts-container">
+			<div id="page-numbers">
+				<ul>
+					<% (1..@max_pages).each do |pnum| %>
+					<li>
+						<%= link_to pnum, root_path(page: pnum)%>
+					</li>
+					<% end %>
+				</ul>
+				
+			</div>
 			<% if user_signed_in? %>
 			<div id="new-post-form-container">
 				<%= form_for @post, remote: true do |f| %>
@@ -13,7 +23,7 @@
 			</div>
 			<% end %>
 
-			<div id="posts-list-container">
+			<div id="posts-list-container" class="animated lightSpeedIn">
 				<ul id="posts-list">
 					<% @posts.each do |post| %>
 						<%= render 'post', p: post %>
@@ -30,8 +40,6 @@
 	</div>
 
 </main>
-
-
 
 
 

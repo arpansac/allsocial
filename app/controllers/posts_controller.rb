@@ -6,13 +6,22 @@ class PostsController < ApplicationController
   def index
     query = params[:q]
   	@post = Post.new
-  	@comment = Comment.new
+  	
     if (query.blank?)
       @posts = Post.all
     else
   	 @posts = Post.where('content like ?', ('%' + query + '%')).reverse()
     end
-    return @posts
+    
+    @page = params[:page].blank? ? 1 : params[:page].to_i
+    @count = params[:count].blank? ? 2 : params[:count].to_i
+   
+    @max_pages = @posts.length/@count
+
+
+    @posts = @posts.offset(@count * (@page-1)).limit(@count)
+
+    @comment = Comment.new
   end
 
   def create
