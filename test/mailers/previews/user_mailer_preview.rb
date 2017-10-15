@@ -4,5 +4,4 @@ class UserMailerPreview < ActionMailer::Preview
 	def new_comment_email
 		UserMailer.new_comment_email(Comment.last)
 	end
-
 end

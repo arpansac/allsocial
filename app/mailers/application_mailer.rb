@@ -1,4 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "someone@codingninjas.in"
+  default from: "admin@allsocial.com"
+
   layout 'mailer'
 end
