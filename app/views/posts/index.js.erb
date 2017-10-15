@@ -1,0 +1,10 @@
+<% @posts.each do |post| %>
+	
+	$('#posts-list').append("<%= escape_javascript  render 'post', p:post  %>");
+
+<% end %>
+
+
+localStorage.page = <%= @page+1 %>;
+localStorage.count = <%= @count %>
+postsAjax = undefined;

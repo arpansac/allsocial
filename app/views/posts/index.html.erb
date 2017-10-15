@@ -3,16 +3,6 @@
 
 	<div id="page-container">
 		<div id="posts-container">
-			<div id="page-numbers">
-				<ul>
-					<% (1..@max_pages).each do |pnum| %>
-					<li>
-						<%= link_to pnum, root_path(page: pnum)%>
-					</li>
-					<% end %>
-				</ul>
-				
-			</div>
 			<% if user_signed_in? %>
 			<div id="new-post-form-container">
 				<%= form_for @post, remote: true do |f| %>
@@ -40,6 +30,43 @@
 	</div>
 
 </main>
+<script type="text/javascript">
+	localStorage.page = 2;
+	localStorage.count = <%= @count %>;
+	initialScroll = 0;
+	var postsAjax;
+	function getPosts(){
+		postsAjax = $.ajax({
+			type: 'GET',
+			url: '/',
+			data: {
+				page: localStorage.page,
+				count: localStorage.count
+			},
+			dataType: 'script',
+		});
+	}
+
+	$(window).scroll(function(){
+
+		if (window.scrollY > initialScroll + 300 && postsAjax == undefined){
+			getPosts();
+			initialScroll = window.scrollY;
+		}
+
+	});
+
+
+</script>
+
+
+
+
+
+
+
+
+
 
 
 
