@@ -11,7 +11,7 @@ class CommentsController < ApplicationController
   	@comment.save
     @post = @comment.post
 
-    UserMailer.new_comment_email(@comment).deliver_now
+    Resque.enqueue(CommentEmailWorker, @comment.id)
 
   end
 
@@ -39,3 +39,37 @@ class CommentsController < ApplicationController
 
   end
 end
+
+
+
+
+# User adds comment --> Rails Server [controller]
+
+# --> Comment added --> Show on page
+
+
+# --> Request added to queue on Redis using Resque --> Resque Executes the tasks from redis 
+# one by one[Send Comment Email]
+
+
+# All the things which are running
+
+# Rails Server
+# Redis Server
+# Resque Workers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

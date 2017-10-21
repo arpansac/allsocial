@@ -51,7 +51,7 @@
 
 	$(window).scroll(function(){
 
-		if (window.scrollY > initialScroll + 300 && postsAjax == undefined){
+		if (window.scrollY > initialScroll + 200 && postsAjax == undefined){
 			getPosts();
 			initialScroll = window.scrollY;
 		}

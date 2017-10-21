@@ -1,5 +1,8 @@
 source 'https://rubygems.org'
 
+
+gem 'resque'
+
 gem "font-awesome-rails"
 
 gem "paperclip", "~> 5.0.0"

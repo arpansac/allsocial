@@ -1,5 +1,5 @@
 class ApplicationMailer < ActionMailer::Base
-  default from: "admin@allsocial.com"
+  default from: "arpansac@gmail.com"
 
   layout 'mailer'
 end
