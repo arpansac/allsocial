@@ -7,6 +7,15 @@ class Post < ActiveRecord::Base
 	has_many :likes, as: :likeable
 
 
+	def as_json(options = {})
+		if options[:serialization_key] == 'unauthenticated'
+			return PostSerializer.new(self).as_json
+		else
+			return PostAuthSerializer.new(self).as_json
+		end
+	end
+
+
 	def user_can_like(user)
 		return self.likes.find_by(user: user).blank?
 	end

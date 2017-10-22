@@ -22,6 +22,24 @@ class PostsController < ApplicationController
     @posts = @posts.offset(@count * (@page-1)).limit(@count)
 
     @comment = Comment.new
+
+    respond_to do |format|
+      format.html
+      format.js
+
+      if !user_signed_in?
+        s_key = 'unauthenticated'
+        
+      else
+        s_key = 'authenticated'
+      end
+
+       format.json { render json: {
+            'message': 'Request Successful',
+            'posts': @posts
+          }, serialization_key: s_key }
+    end
+
   end
 
   def create
