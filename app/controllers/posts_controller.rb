@@ -3,6 +3,21 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:destroy]
   before_action :authorize_user, only: [:destroy]
 
+
+  skip_before_action :verify_authenticity_token, only: [:create_api]
+  before_action :authenticate_user_custom, only: [:create_api]
+
+
+  def create_api
+    @post = Post.new(post_params)
+    @post.user = current_user
+    @post.save
+    return render json: {
+            'message': 'Request Successful',
+            'posts': @post
+          }, serialization_key: 'authenticated'
+  end
+
   def index
     query = params[:q]
   	@post = Post.new

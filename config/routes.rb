@@ -1,12 +1,13 @@
 Rails.application.routes.draw do
   	
-
+  post 'users/api_sign_in' => 'users#api_sign_in'
 	post 'likes/toggle_comment_like/' => 'likes#toggle_comment_like'
 	post 'likes/toggle_post_like/' => 'likes#toggle_post_like'
 
   get 'comments/create'
 
   get 'comments/destroy'
+  post 'posts/create_api' => 'posts#create_api'
 
   devise_for :users
   get 'users/filter_by_email' => 'users#filter_by_email'
