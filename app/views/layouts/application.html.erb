@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +12,7 @@
   <link rel="stylesheet" type="text/css" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
   <meta name="viewport" content="initial-scale=7.0, width=device-width">
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
   <%= csrf_meta_tags %>
 </head>
 <body>
@@ -45,6 +47,7 @@
 						<i class="fa  fa-user-circle-o "></i>
 						<%= current_user.email %>
 					</p>
+					<input type='hidden' id="logged-in-user-email"  value="<%= current_user.email %>">
 
 				</li>
 				<li>
@@ -57,7 +60,24 @@
 	</header>
 
 <%= yield %>
-	
+	<div id="user-chat-box">
+		<ul id="chat-messages-list">
+			<li class="other-message">
+				<span>Other Message</span>
+			</li>
+			<li class="self-message">
+				<span>
+					Self Message
+				</span>
+				
+			</li>
+		</ul>
+		<div id="chat-message-input-container">
+			<input id="chat-message-input" placeholder="Type message here">
+			<button id="send-message"><i class="fa fa-thumbs-up"></i></button>
+		</div>
+
+	</div>
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" type="text/javascript"></script>
 	<script>

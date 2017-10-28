@@ -14,3 +14,70 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require_tree .
+
+
+window.addEventListener('load', function(){
+	var user_email = $('#logged-in-user-email').val();
+	var socket = io.connect('http://192.168.1.48:5000');
+
+	socket.on('connect', function(){
+		console.log('handshake completed');
+		socket.emit('join_room', {user_email: user_email});
+	});
+
+	socket.on('user_joined', function(data){
+		console.log(data.user_email + ' also joined you');
+	});
+
+	$('#send-message').click(function(){
+		var newMessage = $('#chat-message-input').val();
+
+		if (newMessage != ''){
+			socket.emit('send_message', {user_email: user_email, message: newMessage});
+		}
+	});
+
+	socket.on('receive_message', function(data){
+		console.log(data.user_email + ' sent message ' + data.message);
+		appendMessage(data.message, data.user_email);
+	});
+
+
+	function appendMessage(message, email){
+		var rMessage = $('<li>');
+		rMessage.append($('<span>', {
+			html: message
+		}));
+		if (email == user_email){
+			// self message
+			rMessage.addClass('self-message');
+
+		}else if(email == undefined){
+			rMessage.addClass('other-message');
+		}else{
+			// other message
+			rMessage.addClass('other-message');
+		}
+
+		$('#chat-messages-list').append(rMessage);
+	}
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
