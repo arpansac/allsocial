@@ -18,11 +18,11 @@ Rails.application.routes.draw do
 
   root "posts#index"
 
-  namespace :api do
-    namespace :v1 do
-      get 'posts' => 'posts#index'
-    end
-  end
+#  namespace :api do
+#    namespace :v1 do
+#      get 'posts' => 'posts#index'
+#    end
+#  end
 
 
 end

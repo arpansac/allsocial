@@ -18,7 +18,7 @@
 
 window.addEventListener('load', function(){
 	var user_email = $('#logged-in-user-email').val();
-	var socket = io.connect('http://192.168.1.48:5000');
+	var socket = io.connect('http://13.126.192.223:8005');
 
 	socket.on('connect', function(){
 		console.log('handshake completed');

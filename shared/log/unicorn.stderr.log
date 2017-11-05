@@ -1,0 +1,199 @@
+I, [2017-11-05T06:04:46.898731 #21053]  INFO -- : Refreshing Gem list
+I, [2017-11-05T06:04:48.486831 #21053]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T06:04:48.486949 #21053]  INFO -- : worker=0 spawning...
+I, [2017-11-05T06:04:48.488124 #21053]  INFO -- : worker=1 spawning...
+I, [2017-11-05T06:04:48.488712 #21056]  INFO -- : worker=0 spawned pid=21056
+I, [2017-11-05T06:04:48.488810 #21056]  INFO -- : worker=0 ready
+I, [2017-11-05T06:04:48.489586 #21053]  INFO -- : worker=2 spawning...
+I, [2017-11-05T06:04:48.490242 #21053]  INFO -- : worker=3 spawning...
+I, [2017-11-05T06:04:48.490705 #21059]  INFO -- : worker=1 spawned pid=21059
+I, [2017-11-05T06:04:48.490797 #21059]  INFO -- : worker=1 ready
+I, [2017-11-05T06:04:48.491552 #21053]  INFO -- : master process ready
+I, [2017-11-05T06:04:48.502852 #21061]  INFO -- : worker=2 spawned pid=21061
+I, [2017-11-05T06:04:48.502955 #21061]  INFO -- : worker=2 ready
+I, [2017-11-05T06:04:48.503479 #21064]  INFO -- : worker=3 spawned pid=21064
+I, [2017-11-05T06:04:48.503567 #21064]  INFO -- : worker=3 ready
+I, [2017-11-05T06:13:45.413881 #21053]  INFO -- : reaped #<Process::Status: pid 21056 exit 0> worker=0
+I, [2017-11-05T06:13:45.413974 #21053]  INFO -- : reaped #<Process::Status: pid 21059 exit 0> worker=1
+I, [2017-11-05T06:13:45.414010 #21053]  INFO -- : reaped #<Process::Status: pid 21061 exit 0> worker=2
+I, [2017-11-05T06:13:45.414042 #21053]  INFO -- : reaped #<Process::Status: pid 21064 exit 0> worker=3
+I, [2017-11-05T06:13:45.414088 #21053]  INFO -- : master complete
+I, [2017-11-05T06:14:17.109537 #1373]  INFO -- : Refreshing Gem list
+I, [2017-11-05T06:14:19.883634 #1373]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T06:14:19.883767 #1373]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T06:14:19.883869 #1373]  INFO -- : worker=0 spawning...
+I, [2017-11-05T06:14:19.884808 #1373]  INFO -- : worker=1 spawning...
+I, [2017-11-05T06:14:19.885441 #1373]  INFO -- : worker=2 spawning...
+I, [2017-11-05T06:14:19.885988 #1388]  INFO -- : worker=0 spawned pid=1388
+I, [2017-11-05T06:14:19.886084 #1388]  INFO -- : worker=0 ready
+I, [2017-11-05T06:14:19.886736 #1373]  INFO -- : worker=3 spawning...
+I, [2017-11-05T06:14:19.887219 #1390]  INFO -- : worker=1 spawned pid=1390
+I, [2017-11-05T06:14:19.887309 #1390]  INFO -- : worker=1 ready
+I, [2017-11-05T06:14:19.887993 #1373]  INFO -- : master process ready
+I, [2017-11-05T06:14:19.893556 #1393]  INFO -- : worker=2 spawned pid=1393
+I, [2017-11-05T06:14:19.893675 #1393]  INFO -- : worker=2 ready
+I, [2017-11-05T06:14:19.894225 #1396]  INFO -- : worker=3 spawned pid=1396
+I, [2017-11-05T06:14:19.894319 #1396]  INFO -- : worker=3 ready
+I, [2017-11-05T06:15:10.720905 #1373]  INFO -- : reaped #<Process::Status: pid 1388 exit 0> worker=0
+I, [2017-11-05T06:15:10.720985 #1373]  INFO -- : reaped #<Process::Status: pid 1390 exit 0> worker=1
+I, [2017-11-05T06:15:10.721021 #1373]  INFO -- : reaped #<Process::Status: pid 1393 exit 0> worker=2
+I, [2017-11-05T06:15:10.721057 #1373]  INFO -- : reaped #<Process::Status: pid 1396 exit 0> worker=3
+I, [2017-11-05T06:15:10.721112 #1373]  INFO -- : master complete
+I, [2017-11-05T06:16:29.949742 #1367]  INFO -- : Refreshing Gem list
+I, [2017-11-05T06:16:32.801733 #1367]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T06:16:32.801872 #1367]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T06:16:32.801957 #1367]  INFO -- : worker=0 spawning...
+I, [2017-11-05T06:16:32.802924 #1367]  INFO -- : worker=1 spawning...
+I, [2017-11-05T06:16:32.803571 #1367]  INFO -- : worker=2 spawning...
+I, [2017-11-05T06:16:32.804146 #1384]  INFO -- : worker=0 spawned pid=1384
+I, [2017-11-05T06:16:32.804245 #1384]  INFO -- : worker=0 ready
+I, [2017-11-05T06:16:32.804986 #1367]  INFO -- : worker=3 spawning...
+I, [2017-11-05T06:16:32.805442 #1386]  INFO -- : worker=1 spawned pid=1386
+I, [2017-11-05T06:16:32.805539 #1386]  INFO -- : worker=1 ready
+I, [2017-11-05T06:16:32.806274 #1367]  INFO -- : master process ready
+I, [2017-11-05T06:16:32.820792 #1389]  INFO -- : worker=2 spawned pid=1389
+I, [2017-11-05T06:16:32.820923 #1389]  INFO -- : worker=2 ready
+I, [2017-11-05T06:16:32.821462 #1392]  INFO -- : worker=3 spawned pid=1392
+I, [2017-11-05T06:16:32.821555 #1392]  INFO -- : worker=3 ready
+I, [2017-11-05T06:26:06.545619 #6083]  INFO -- : Refreshing Gem list
+I, [2017-11-05T06:26:08.122963 #6083]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T06:26:08.123103 #6083]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T06:26:08.123189 #6083]  INFO -- : worker=0 spawning...
+I, [2017-11-05T06:26:08.124111 #6083]  INFO -- : worker=1 spawning...
+I, [2017-11-05T06:26:08.124754 #6083]  INFO -- : worker=2 spawning...
+I, [2017-11-05T06:26:08.125331 #6086]  INFO -- : worker=0 spawned pid=6086
+I, [2017-11-05T06:26:08.125443 #6086]  INFO -- : worker=0 ready
+I, [2017-11-05T06:26:08.126140 #6083]  INFO -- : worker=3 spawning...
+I, [2017-11-05T06:26:08.126614 #6088]  INFO -- : worker=1 spawned pid=6088
+I, [2017-11-05T06:26:08.126712 #6088]  INFO -- : worker=1 ready
+I, [2017-11-05T06:26:08.127399 #6083]  INFO -- : master process ready
+I, [2017-11-05T06:26:08.138532 #6091]  INFO -- : worker=2 spawned pid=6091
+I, [2017-11-05T06:26:08.138654 #6091]  INFO -- : worker=2 ready
+I, [2017-11-05T06:26:08.139194 #6094]  INFO -- : worker=3 spawned pid=6094
+I, [2017-11-05T06:26:08.139289 #6094]  INFO -- : worker=3 ready
+I, [2017-11-05T06:26:19.743600 #6083]  INFO -- : reaped #<Process::Status: pid 6086 exit 0> worker=0
+I, [2017-11-05T06:26:19.743695 #6083]  INFO -- : reaped #<Process::Status: pid 6088 exit 0> worker=1
+I, [2017-11-05T06:26:19.743735 #6083]  INFO -- : reaped #<Process::Status: pid 6091 exit 0> worker=2
+I, [2017-11-05T06:26:19.743768 #6083]  INFO -- : reaped #<Process::Status: pid 6094 exit 0> worker=3
+I, [2017-11-05T06:26:19.743819 #6083]  INFO -- : master complete
+I, [2017-11-05T06:40:41.657651 #16138]  INFO -- : Refreshing Gem list
+I, [2017-11-05T06:40:43.261931 #16138]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T06:40:43.262066 #16138]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T06:40:43.262153 #16138]  INFO -- : worker=0 spawning...
+I, [2017-11-05T06:40:43.262963 #16138]  INFO -- : worker=1 spawning...
+I, [2017-11-05T06:40:43.263554 #16138]  INFO -- : worker=2 spawning...
+I, [2017-11-05T06:40:43.264093 #16141]  INFO -- : worker=0 spawned pid=16141
+I, [2017-11-05T06:40:43.264194 #16141]  INFO -- : worker=0 ready
+I, [2017-11-05T06:40:43.264887 #16138]  INFO -- : worker=3 spawning...
+I, [2017-11-05T06:40:43.265324 #16143]  INFO -- : worker=1 spawned pid=16143
+I, [2017-11-05T06:40:43.265406 #16143]  INFO -- : worker=1 ready
+I, [2017-11-05T06:40:43.266072 #16138]  INFO -- : master process ready
+I, [2017-11-05T06:40:43.277173 #16146]  INFO -- : worker=2 spawned pid=16146
+I, [2017-11-05T06:40:43.277278 #16146]  INFO -- : worker=2 ready
+I, [2017-11-05T06:40:43.277779 #16149]  INFO -- : worker=3 spawned pid=16149
+I, [2017-11-05T06:40:43.277864 #16149]  INFO -- : worker=3 ready
+I, [2017-11-05T06:42:50.578478 #16138]  INFO -- : reaped #<Process::Status: pid 16143 exit 0> worker=1
+I, [2017-11-05T06:42:50.678889 #16138]  INFO -- : reaped #<Process::Status: pid 16141 exit 0> worker=0
+I, [2017-11-05T06:42:50.678974 #16138]  INFO -- : reaped #<Process::Status: pid 16146 exit 0> worker=2
+I, [2017-11-05T06:42:50.679006 #16138]  INFO -- : reaped #<Process::Status: pid 16149 exit 0> worker=3
+I, [2017-11-05T06:42:50.679057 #16138]  INFO -- : master complete
+I, [2017-11-05T06:42:52.393624 #16430]  INFO -- : Refreshing Gem list
+I, [2017-11-05T06:42:54.035585 #16430]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T06:42:54.035992 #16430]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T06:42:54.036085 #16430]  INFO -- : worker=0 spawning...
+I, [2017-11-05T06:42:54.037178 #16430]  INFO -- : worker=1 spawning...
+I, [2017-11-05T06:42:54.037812 #16430]  INFO -- : worker=2 spawning...
+I, [2017-11-05T06:42:54.038381 #16433]  INFO -- : worker=0 spawned pid=16433
+I, [2017-11-05T06:42:54.038480 #16433]  INFO -- : worker=0 ready
+I, [2017-11-05T06:42:54.039184 #16430]  INFO -- : worker=3 spawning...
+I, [2017-11-05T06:42:54.039635 #16435]  INFO -- : worker=1 spawned pid=16435
+I, [2017-11-05T06:42:54.039721 #16435]  INFO -- : worker=1 ready
+I, [2017-11-05T06:42:54.040445 #16430]  INFO -- : master process ready
+I, [2017-11-05T06:42:54.044794 #16438]  INFO -- : worker=2 spawned pid=16438
+I, [2017-11-05T06:42:54.044894 #16438]  INFO -- : worker=2 ready
+I, [2017-11-05T06:42:54.052248 #16441]  INFO -- : worker=3 spawned pid=16441
+I, [2017-11-05T06:42:54.053826 #16441]  INFO -- : worker=3 ready
+I, [2017-11-05T06:48:37.552002 #16430]  INFO -- : reaped #<Process::Status: pid 16433 exit 0> worker=0
+I, [2017-11-05T06:48:37.552087 #16430]  INFO -- : reaped #<Process::Status: pid 16435 exit 0> worker=1
+I, [2017-11-05T06:48:37.552119 #16430]  INFO -- : reaped #<Process::Status: pid 16438 exit 0> worker=2
+I, [2017-11-05T06:48:37.552148 #16430]  INFO -- : reaped #<Process::Status: pid 16441 exit 0> worker=3
+I, [2017-11-05T06:48:37.552194 #16430]  INFO -- : master complete
+I, [2017-11-05T06:48:49.461442 #16764]  INFO -- : Refreshing Gem list
+I, [2017-11-05T06:48:51.064897 #16764]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T06:48:51.065558 #16764]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T06:48:51.065642 #16764]  INFO -- : worker=0 spawning...
+I, [2017-11-05T06:48:51.066745 #16764]  INFO -- : worker=1 spawning...
+I, [2017-11-05T06:48:51.067385 #16764]  INFO -- : worker=2 spawning...
+I, [2017-11-05T06:48:51.067920 #16767]  INFO -- : worker=0 spawned pid=16767
+I, [2017-11-05T06:48:51.068013 #16767]  INFO -- : worker=0 ready
+I, [2017-11-05T06:48:51.068749 #16764]  INFO -- : worker=3 spawning...
+I, [2017-11-05T06:48:51.069195 #16769]  INFO -- : worker=1 spawned pid=16769
+I, [2017-11-05T06:48:51.069277 #16769]  INFO -- : worker=1 ready
+I, [2017-11-05T06:48:51.069993 #16764]  INFO -- : master process ready
+I, [2017-11-05T06:48:51.081377 #16772]  INFO -- : worker=2 spawned pid=16772
+I, [2017-11-05T06:48:51.081476 #16772]  INFO -- : worker=2 ready
+I, [2017-11-05T06:48:51.082044 #16775]  INFO -- : worker=3 spawned pid=16775
+I, [2017-11-05T06:48:51.082124 #16775]  INFO -- : worker=3 ready
+I, [2017-11-05T06:53:46.257084 #16764]  INFO -- : reaped #<Process::Status: pid 16767 exit 0> worker=0
+I, [2017-11-05T06:53:46.257704 #16764]  INFO -- : reaped #<Process::Status: pid 16769 exit 0> worker=1
+I, [2017-11-05T06:53:46.257738 #16764]  INFO -- : reaped #<Process::Status: pid 16772 exit 0> worker=2
+I, [2017-11-05T06:53:46.257764 #16764]  INFO -- : reaped #<Process::Status: pid 16775 exit 0> worker=3
+I, [2017-11-05T06:53:46.257810 #16764]  INFO -- : master complete
+I, [2017-11-05T06:53:49.117539 #17118]  INFO -- : Refreshing Gem list
+I, [2017-11-05T06:53:50.749181 #17118]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T06:53:50.749310 #17118]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T06:53:50.749390 #17118]  INFO -- : worker=0 spawning...
+I, [2017-11-05T06:53:50.750492 #17118]  INFO -- : worker=1 spawning...
+I, [2017-11-05T06:53:50.751164 #17118]  INFO -- : worker=2 spawning...
+I, [2017-11-05T06:53:50.751734 #17121]  INFO -- : worker=0 spawned pid=17121
+I, [2017-11-05T06:53:50.751842 #17121]  INFO -- : worker=0 ready
+I, [2017-11-05T06:53:50.752606 #17118]  INFO -- : worker=3 spawning...
+I, [2017-11-05T06:53:50.753115 #17123]  INFO -- : worker=1 spawned pid=17123
+I, [2017-11-05T06:53:50.753226 #17123]  INFO -- : worker=1 ready
+I, [2017-11-05T06:53:50.753987 #17118]  INFO -- : master process ready
+I, [2017-11-05T06:53:50.765611 #17126]  INFO -- : worker=2 spawned pid=17126
+I, [2017-11-05T06:53:50.765733 #17126]  INFO -- : worker=2 ready
+I, [2017-11-05T06:53:50.766268 #17129]  INFO -- : worker=3 spawned pid=17129
+I, [2017-11-05T06:53:50.766367 #17129]  INFO -- : worker=3 ready
+I, [2017-11-05T07:06:18.992985 #17118]  INFO -- : reaped #<Process::Status: pid 17121 exit 0> worker=0
+I, [2017-11-05T07:06:18.993095 #17118]  INFO -- : reaped #<Process::Status: pid 17123 exit 0> worker=1
+I, [2017-11-05T07:06:18.993135 #17118]  INFO -- : reaped #<Process::Status: pid 17126 exit 0> worker=2
+I, [2017-11-05T07:06:18.993166 #17118]  INFO -- : reaped #<Process::Status: pid 17129 exit 0> worker=3
+I, [2017-11-05T07:06:18.993223 #17118]  INFO -- : master complete
+I, [2017-11-05T07:06:20.854136 #18195]  INFO -- : Refreshing Gem list
+I, [2017-11-05T07:06:22.779384 #18195]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T07:06:22.780729 #18195]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T07:06:22.780814 #18195]  INFO -- : worker=0 spawning...
+I, [2017-11-05T07:06:22.782011 #18195]  INFO -- : worker=1 spawning...
+I, [2017-11-05T07:06:22.782570 #18198]  INFO -- : worker=0 spawned pid=18198
+I, [2017-11-05T07:06:22.782674 #18198]  INFO -- : worker=0 ready
+I, [2017-11-05T07:06:22.783403 #18195]  INFO -- : worker=2 spawning...
+I, [2017-11-05T07:06:22.784056 #18195]  INFO -- : worker=3 spawning...
+I, [2017-11-05T07:06:22.784553 #18201]  INFO -- : worker=1 spawned pid=18201
+I, [2017-11-05T07:06:22.784649 #18201]  INFO -- : worker=1 ready
+I, [2017-11-05T07:06:22.785424 #18195]  INFO -- : master process ready
+I, [2017-11-05T07:06:22.797503 #18203]  INFO -- : worker=2 spawned pid=18203
+I, [2017-11-05T07:06:22.797595 #18203]  INFO -- : worker=2 ready
+I, [2017-11-05T07:06:22.798041 #18206]  INFO -- : worker=3 spawned pid=18206
+I, [2017-11-05T07:06:22.798136 #18206]  INFO -- : worker=3 ready
+I, [2017-11-05T07:29:58.280543 #18195]  INFO -- : reaped #<Process::Status: pid 18198 exit 0> worker=0
+I, [2017-11-05T07:29:58.281168 #18195]  INFO -- : reaped #<Process::Status: pid 18201 exit 0> worker=1
+I, [2017-11-05T07:29:58.281212 #18195]  INFO -- : reaped #<Process::Status: pid 18203 exit 0> worker=2
+I, [2017-11-05T07:29:58.281244 #18195]  INFO -- : reaped #<Process::Status: pid 18206 exit 0> worker=3
+I, [2017-11-05T07:29:58.281291 #18195]  INFO -- : master complete
+I, [2017-11-05T07:30:00.678399 #20381]  INFO -- : Refreshing Gem list
+I, [2017-11-05T07:30:02.426725 #20381]  INFO -- : unlinking existing socket=/home/ubuntu/allsocial/shared/sockets/unicorn.sock
+I, [2017-11-05T07:30:02.427303 #20381]  INFO -- : listening on addr=/home/ubuntu/allsocial/shared/sockets/unicorn.sock fd=12
+I, [2017-11-05T07:30:02.427398 #20381]  INFO -- : worker=0 spawning...
+I, [2017-11-05T07:30:02.428612 #20381]  INFO -- : worker=1 spawning...
+I, [2017-11-05T07:30:02.429275 #20381]  INFO -- : worker=2 spawning...
+I, [2017-11-05T07:30:02.429859 #20385]  INFO -- : worker=0 spawned pid=20385
+I, [2017-11-05T07:30:02.429974 #20385]  INFO -- : worker=0 ready
+I, [2017-11-05T07:30:02.430745 #20381]  INFO -- : worker=3 spawning...
+I, [2017-11-05T07:30:02.431213 #20387]  INFO -- : worker=1 spawned pid=20387
+I, [2017-11-05T07:30:02.431318 #20387]  INFO -- : worker=1 ready
+I, [2017-11-05T07:30:02.432065 #20381]  INFO -- : master process ready
+I, [2017-11-05T07:30:02.436868 #20390]  INFO -- : worker=2 spawned pid=20390
+I, [2017-11-05T07:30:02.436985 #20390]  INFO -- : worker=2 ready
+I, [2017-11-05T07:30:02.437522 #20393]  INFO -- : worker=3 spawned pid=20393
+I, [2017-11-05T07:30:02.437622 #20393]  INFO -- : worker=3 ready
