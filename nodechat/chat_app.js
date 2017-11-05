@@ -2,7 +2,7 @@ console.log('Booting Chat Server...');
 
 var http = require('http');
 console.log('acquired http, now creating server...');
-var server = http.createServer().listen(5000, '192.168.1.48');
+var server = http.createServer().listen(5000, '127.0.0.1');
 
 console.log('chat server started!');
 

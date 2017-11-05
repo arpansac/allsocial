@@ -9,7 +9,8 @@ Rails.application.routes.draw do
   get 'comments/destroy'
   post 'posts/create_api' => 'posts#create_api'
 
-  devise_for :users
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+
   get 'users/filter_by_email' => 'users#filter_by_email'
   get 'users/:id' => 'users#show', as: :user_show
   patch 'user/:id' => 'users#update', as: :user

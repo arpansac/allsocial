@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20171022071536) do
+ActiveRecord::Schema.define(version: 20171103102023) do
 
   create_table "comments", force: :cascade do |t|
     t.integer  "user_id",    null: false
@@ -84,6 +84,9 @@ ActiveRecord::Schema.define(version: 20171022071536) do
     t.datetime "profile_picture_updated_at"
     t.string   "access_token"
     t.boolean  "access_token_is_valid"
+    t.string   "provider"
+    t.string   "uid"
+    t.text     "fb_access_token"
   end
 
   add_index "users", ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true

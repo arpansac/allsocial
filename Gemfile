@@ -1,4 +1,9 @@
 source 'https://rubygems.org'
+
+gem 'rest-client'
+
+gem 'omniauth-facebook'
+
 gem 'active_model_serializers', '~> 0.10.0'
 
 gem 'resque'
